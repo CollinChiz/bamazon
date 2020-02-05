@@ -47,10 +47,16 @@ function afterConnection() {
             for(i=0; i<res.length; i++) {
                 
                 if( item === parseInt(res[i].item_id)) {
-                    console.log('Found it')
-                    console.log(res[i])
+                    console.log('Found it' + "\n")
+                    console.log("item id: " + res[i].item_id);
+                    console.log("name: " + res[i].product_name);
+                    console.log("Department: " + res[i].department_name);
+                    console.log("Quantity: " + res[i].stock_quantity)
                     if(res[i].stock_quantity < quantity) {
-                        console.log("Not enough stock");
+                        console.log("Not enough stock")
+                    }
+                    else {
+                    console.log("Price: " + "$" + res[i].price)
                     }
 
                 
